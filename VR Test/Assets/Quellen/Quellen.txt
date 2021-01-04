@@ -1,0 +1,5 @@
+Animation Rigging:
+https://www.youtube.com/watch?v=Htl7ysv10Qs
+https://docs.unity3d.com/Packages/com.unity.animation.rigging@0.3/manual/ConstraintComponents.html
+https://www.youtube.com/watch?v=XjMKbElVNmg
+https://www.youtube.com/watch?v=IRqom7Ee5pA
