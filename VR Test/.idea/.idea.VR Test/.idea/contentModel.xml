@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="B:\GitHub\VRTest\VR Test" t="IncludeRecursive">
+    <e p="B:\GitHub\VirtualAgent\VR Test" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AgentBehaviour.cs" t="Include" />
         <e p="ColorController.cs" t="Include" />
+        <e p="Memory.cs" t="Include" />
+        <e p="MemoryCard.cs" t="Include" />
         <e p="Oculus" t="Include">
           <e p="AudioManager" t="Include">
             <e p="scenes" t="Include">
@@ -766,7 +769,6 @@
             </e>
           </e>
         </e>
-        <e p="PlayerControllerSelf.cs" t="Include" />
         <e p="Quellen" t="Include">
           <e p="Quellen.txt" t="Include" />
         </e>
@@ -797,6 +799,6 @@
       <e p="VR Test.sln" t="IncludeFlat" />
     </e>
     <e p="C:\Users\User\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\User\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_VR Test.-1039297743.00" t="ExcludeRecursive" />
+    <e p="C:\Users\User\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_VR Test.269509821.00" t="ExcludeRecursive" />
   </component>
 </project>
