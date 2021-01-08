@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e01670-bc4b-49c6-99fa-5874d5ccb48f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AgentBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AgentBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/Megan.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Agents/Animation/Megan.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/wall-color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/wall-color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerControllerSelf.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerControllerSelf.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/OculusPlatformSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/OculusPlatformSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/OvrAvatarSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/OvrAvatarSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/Pointing-start.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/Pointing-start.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/Standard Walk.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/Standard Walk.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/Talking.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/Talking.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/_dleswitch 1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/_dleswitch 1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Memory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Memory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MemoryCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MemoryCard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,6 +48,7 @@
   <component name="ProjectId" id="1l68yoYPPEevDmX6VaIlNtEKyFQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -93,6 +98,7 @@
       <workItem from="1609694510321" duration="578000" />
       <workItem from="1609769132650" duration="598000" />
       <workItem from="1609947430962" duration="8613000" />
+      <workItem from="1610102633482" duration="11973000" />
     </task>
     <servers />
   </component>
@@ -106,7 +112,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

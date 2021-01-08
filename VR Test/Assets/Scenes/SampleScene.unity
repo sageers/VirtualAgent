@@ -505,6 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memory: {fileID: 0}
+  gazeConstraint: {fileID: 0}
 --- !u!136 &100193288
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -891,7 +892,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Exit
+          m_StringArgument: ExitTalk
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &113262446
@@ -2228,6 +2229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!4 &367593807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8557840724688576309, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
@@ -3455,6 +3457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1 &581146538
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,6 +4168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1 &674381176
 GameObject:
   m_ObjectHideFlags: 0
@@ -5567,6 +5571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1 &855596704
 GameObject:
   m_ObjectHideFlags: 0
@@ -5762,6 +5767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!4 &871556542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5491107424948875408, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
@@ -5987,6 +5993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1 &912528136
 GameObject:
   m_ObjectHideFlags: 0
@@ -6276,6 +6283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!4 &951929060 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3436763942930711115, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
@@ -6407,6 +6415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1001 &1008474975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6572,6 +6581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1001 &1020319343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7018,6 +7028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!4 &1112105970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -278357732408545657, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
@@ -8030,6 +8041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!4 &1176261635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6273648451003408588, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
@@ -8643,6 +8655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1001 &1238210881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9483,6 +9496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1001 &1423254487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10225,6 +10239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!4 &1508543581 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1451524595806020157, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
@@ -10662,6 +10677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!4 &1577496681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2383527197156728309, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
@@ -10957,6 +10973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1 &1632084276
 GameObject:
   m_ObjectHideFlags: 0
@@ -12059,7 +12076,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Idle2
+          m_StringArgument: TalkBothHandsUp
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1660538130
@@ -12368,6 +12385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1 &1776349361
 GameObject:
   m_ObjectHideFlags: 0
@@ -12974,7 +12992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.625
+      value: 0.255
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12982,23 +13000,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.861
+      value: 3.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13006,7 +13024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7070223beeee8004c809dd3806dcb7e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -13342,6 +13360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!4 &1931095307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6448526884845150325, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
@@ -14651,6 +14670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turned: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  materialToChange: {fileID: 0}
 --- !u!1 &1125067469801150
 GameObject:
   m_ObjectHideFlags: 0
