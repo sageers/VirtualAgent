@@ -2,114 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e01670-bc4b-49c6-99fa-5874d5ccb48f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AgentBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AgentBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ColorController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ColorController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Memory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Memory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MemoryCard.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MemoryCard.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Materials/cabinet.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Materials/cabinet.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Materials/glass.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Materials/glass.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Mesh.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Mesh/cabinet.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Mesh/cabinet.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_cabinet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_cabinet/cabinet_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_cabinet/cabinet_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_cabinet/cabinet_AmbientOcclusion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_cabinet/cabinet_AmbientOcclusion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_cabinet/cabinet_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_cabinet/cabinet_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_cabinet/cabinet_SpecularSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_cabinet/cabinet_SpecularSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_glass_cabinet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_glass_cabinet/glass_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_glass_cabinet/glass_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_glass_cabinet/glass_AmbientOcclusion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_glass_cabinet/glass_AmbientOcclusion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_glass_cabinet/glass_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_glass_cabinet/glass_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_glass_cabinet/glass_SpecularSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/Textures/maps_glass_cabinet/glass_SpecularSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/demo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/environment.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/environment/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/environment/Materials/beach.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/environment/Materials/beach.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/environment/beach.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/environment/beach.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/environment/cubemap.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Old Cabinet/environment/cubemap.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Demo/Showcase.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Demo/Showcase.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Demo/Skybox.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Demo/Skybox/Forest_Salzburg1_Blurred.hdr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Demo/Skybox/Forest_Salzburg1_Blurred.hdr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Demo/Skybox/Skybox1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Demo/Skybox/Skybox1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Prefabs/PBR_Table.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/Prefabs/PBR_Table.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Materials/Metal.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Materials/Metal.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Materials/Table_Wood.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Materials/Table_Wood.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Materials/Wood_Table.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Materials/Wood_Table.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/PBR_Table.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/PBR_Table.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_AmbientOcclussion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_AmbientOcclussion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_Height.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_Height.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_MetallicSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_MetallicSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_Roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Metal_Roughness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_AmbientOcclussion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_AmbientOcclussion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_Height.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_Height.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_MetallicSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_MetallicSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_Roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wood_Bottom_Roughness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_AmbientOcclussion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_AmbientOcclussion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_Height.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_Height.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_MetallicSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_MetallicSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_Roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Table/_Models/Table_Textures/Table_New_Connected_Low_Wooden_Table_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/Megan.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Agents/Animation/Megan.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BigFurniturePack/Prefabs/Tables/kitchen_table_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BigFurniturePack/Prefabs/Tables/kitchen_table_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/DebugUI/Scripts/LaserPointer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/DebugUI/Scripts/LaserPointer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Memory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Memory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MemoryCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MemoryCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,9 +29,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/Avatar/Scripts/OvrAvatarHand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/OVRBuildConfig.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGrabber.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MemoryCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/HandsInteraction/Scripts/HandsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRHand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Memory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRSceneSampleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/DebugUI/Scripts/LaserPointer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/Avatar/Scripts/OvrAvatarTouchController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRPhysicsRaycaster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/162374A9-E6CD-4C40-B545-E83DAA849810/4f/1b92cef7/NavMeshAgent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGazePointer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FE84F4A7-54DA-4A6B-B64F-CA409D40938A/57/f7306af3/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRInputModule.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -134,6 +57,10 @@
         <option value="$PROJECT_DIR$/Assets/Memory.cs" />
         <option value="$PROJECT_DIR$/Assets/NavigationAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/AgentBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/DebugUI/Scripts/LaserPointer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MemoryCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Memory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" />
       </list>
     </option>
@@ -193,6 +120,11 @@
       <workItem from="1609947430962" duration="8613000" />
       <workItem from="1610102633482" duration="11973000" />
       <workItem from="1610361067870" duration="12840000" />
+      <workItem from="1610395312601" duration="124000" />
+      <workItem from="1610442574565" duration="10412000" />
+      <workItem from="1610529501283" duration="8263000" />
+      <workItem from="1610559640727" duration="3583000" />
+      <workItem from="1610624289557" duration="15376000" />
     </task>
     <servers />
   </component>

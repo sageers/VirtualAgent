@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 106418152
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c91f00f40581f879bcc89d47626066fd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 525b72fdacf3aef7d65f355ad8f17a96
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/BigFurniturePack/Textures/floor_nm.jpg
+- Assets/BigFurniturePack/Textures/cloth_1.jpg
+- Assets/BigFurniturePack/Textures/floor.jpg
+- Assets/BigFurniturePack/Textures/wood_1.jpg
+Dependencies: []

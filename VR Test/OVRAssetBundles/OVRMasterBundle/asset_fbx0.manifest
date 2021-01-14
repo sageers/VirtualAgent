@@ -1,0 +1,53 @@
+ManifestFileVersion: 0
+CRC: 3635124291
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 67c704d79af63f195841aa9653260415
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b3ceb131f2b7a231ef23f3fa61b3e571
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/BigFurniturePack/Models/coffee_table_1.FBX
+- Assets/Agents/_dle.fbx
+- Assets/BigFurniturePack/Models/mirror_4.FBX
+- Assets/BigFurniturePack/Models/vase_2.FBX
+- Assets/BigFurniturePack/Models/sofa_4.FBX
+- Assets/BigFurniturePack/Models/torchere_1.FBX
+- Assets/Agents/Robot Kyle/Model/Robot Kyle.fbx
+- Assets/BigFurniturePack/Models/kitchen_table_2.FBX
+- Assets/Agents/_dle megan.fbx
+- Assets/BigFurniturePack/Models/rack_1.FBX
+- Assets/BigFurniturePack/Models/torchere_4.FBX
+- Assets/BigFurniturePack/Models/vase_5.FBX
+Dependencies:
+- B:/GitHub/VirtualAgent/VR Test/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- B:/GitHub/VirtualAgent/VR Test/OVRAssetBundles/OVRMasterBundle/asset_png0

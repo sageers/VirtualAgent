@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3838874724
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d8614c8b66717702e28cb21ac9d9aabd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e4bf6a27393fa2915ed1c6a48eba3c02
+HashAppended: 0
+ClassTypes:
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 238
+  Script: {instanceID: 0}
+Assets:
+- Packages/com.unity.animation.rigging/Editor/Shapes/BallEffector.asset
+- Packages/com.unity.animation.rigging/Editor/Shapes/SquareEffector.asset
+- Assets/Scenes/SampleScene/NavMesh.asset
+Dependencies: []

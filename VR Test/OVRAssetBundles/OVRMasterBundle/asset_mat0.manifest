@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 2859935404
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2020126050000a735a4140ee0aedaa4e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8215722b766c6decafa3f90512650b44
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/BigFurniturePack/Materials/Black.mat
+- Assets/Meshes/Decorative plants/Materials/Pot Mat.mat
+- Assets/Agents/Robot Kyle/Materials/Robot_Color.mat
+- Assets/Materials/unturned.mat
+- Assets/Oculus/VR/Materials/CubeMaterial.mat
+- Assets/Laser.mat
+- Assets/BigFurniturePack/Models/Materials/floor.mat
+- Assets/BigFurniturePack/Materials/wood_1.mat
+- Assets/Meshes/Decorative plants/Materials/Shrub Mat.mat
+- Assets/Materials/New Material.mat
+- Assets/Materials/floor-color.mat
+- Assets/Materials/wall-color.mat
+- Assets/Oculus/VR/Materials/BasicHandMaterial.mat
+- Assets/Materials/vase.mat
+- Assets/BigFurniturePack/Materials/cloth_1.mat
+- Assets/Meshes/Decorative plants/Materials/Cover Mat.mat
+- Assets/Materials/branches.mat
+- Assets/Materials/vase2.mat
+- Assets/BigFurniturePack/Models/Materials/base_material.mat
+Dependencies:
+- B:/GitHub/VirtualAgent/VR Test/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- B:/GitHub/VirtualAgent/VR Test/OVRAssetBundles/OVRMasterBundle/asset_png0
+- B:/GitHub/VirtualAgent/VR Test/OVRAssetBundles/OVRMasterBundle/asset_resources
+- B:/GitHub/VirtualAgent/VR Test/OVRAssetBundles/OVRMasterBundle/asset_tga0

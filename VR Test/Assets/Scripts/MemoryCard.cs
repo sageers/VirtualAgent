@@ -6,9 +6,10 @@ using UnityEngine;
 public class MemoryCard : MonoBehaviour
 {
     public bool turned = false;
+    public bool paired = false;
     public Color color;
     private Color _lerpedColor;
-    public Material materialToChange;
+    private Material materialToChange;
 
     public void Start()
     {
@@ -24,6 +25,7 @@ public class MemoryCard : MonoBehaviour
     {
         turned = true;
         StartCoroutine(LerpColor(color, 1));
+        
     }
     public void TurnCard(Color endColor)
     {

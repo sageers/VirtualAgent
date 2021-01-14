@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 112483877
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b7c1d347e3e2ad14b8df89896e6227e7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+Assets:
+- Assets/Oculus/AudioManager/Audio/TestSounds/metal_sliding_door_close_01a.wav
+- Assets/Oculus/AudioManager/Audio/TestSounds/metal_sliding_door_open_01.wav
+- Assets/Oculus/AudioManager/Audio/TestSounds/metal_sliding_door_close_01.wav
+Dependencies: []

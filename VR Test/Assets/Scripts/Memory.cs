@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 using Random = System.Random;
 
@@ -12,11 +13,37 @@ public class Memory : MonoBehaviour
 
     public List<Color> colors = new List<Color>(){Color.blue, Color.red, Color.yellow, Color.cyan, Color.gray, Color.green, Color.magenta, Color.black, new Color(), new Color()};
 
-    private List<MemoryCard> currentSelected = new List<MemoryCard>(2);
+    public List<MemoryCard> currentSelected = new List<MemoryCard>(2);
 
-    
-    
-    public void SetColors()
+    public int turnedCards;
+    public int pairedCards;
+
+    private void Update()
+    {
+        foreach (var memoryCard in memoryCards.Where(memoryCard => !memoryCard.paired && memoryCard.turned))
+        {
+            currentSelected.Add(memoryCard);
+            turnedCards += 2;
+        }
+
+        if (currentSelected.Count == 2)
+        {
+            if (CompareSelected())
+            {
+                foreach (MemoryCard memoryCard in currentSelected)
+                {
+                    memoryCard.paired = true;
+                    pairedCards += 2;
+                    memoryCard.gameObject.GetComponent<EventTrigger>().enabled = false;
+                }
+            }else
+            {
+                TurnBack();
+            }
+        }
+    }
+
+    private void SetColors()
     {
         Shuffle(memoryCards);
 
@@ -53,7 +80,7 @@ public class Memory : MonoBehaviour
 
             if (!selectedCard.turned)
             {
-                currentSelected.Add(selectedCard);
+                //currentSelected.Add(selectedCard);
                 selectedCard.TurnCard();
             }
             else
@@ -80,12 +107,18 @@ public class Memory : MonoBehaviour
         {
             card.TurnCard(Color.white);
             card.turned = false;
+            turnedCards -= 2;
         }
         currentSelected.Clear();
     }
 
     public void Start()
     {
+        foreach (Transform child in transform)
+        {
+            memoryCards.Add(child.gameObject.GetComponent<MemoryCard>());
+        }
+        
         SetColors();
     }
 }

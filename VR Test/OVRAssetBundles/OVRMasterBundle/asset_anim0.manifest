@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 2209118142
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 70dd66ceb70ee3046b7d8a61dc38024d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: af57576da81d5d3ce45807ac11234de6
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+Assets:
+- Assets/Agents/Animation/edit_talk-one-hand-up.anim
+- Assets/Agents/Animation/edit_idle-switch.anim
+- Assets/Agents/Animation/edit_sitting-idle.anim
+- Assets/Agents/Animation/edit_PointingStart.anim
+- Assets/Agents/Animation/edit_stand-to-sit.anim
+- Assets/Agents/Animation/edit_sit-to-stand.anim
+- Assets/Agents/Animation/edit_talk-both-hands-up.anim
+- Assets/Agents/Animation/edit_talk-hip-left-to-right.anim
+- Assets/Agents/Animation/edit_idle-normal.anim
+- Assets/Agents/Animation/edit_walk.anim
+Dependencies: []

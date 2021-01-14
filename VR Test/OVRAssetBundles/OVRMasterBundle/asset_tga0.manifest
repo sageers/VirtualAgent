@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 98002696
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1ef5740d3ca002890979e0ee74d4b21a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 525b72fdacf3aef7d65f355ad8f17a96
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Agents/Robot Kyle/Textures/Robot_Color.tga
+- Assets/Meshes/Decorative plants/Textures/Cover normal.tga
+- Assets/Meshes/Decorative plants/Textures/Pot diffuse.tga
+- Assets/Meshes/Decorative plants/Textures/Cover diffuse.tga
+- Assets/Meshes/Decorative plants/Textures/Shrub normal.tga
+- Assets/Agents/Robot Kyle/Textures/Robot_Normal.tga
+- Assets/Meshes/Decorative plants/Textures/Pot normal.tga
+- Assets/Meshes/Decorative plants/Textures/Shrub diffuse.tga
+Dependencies: []

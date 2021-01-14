@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 3044216958
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dc09799395f9ea0a1be5775b1cf5f0c2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 525b72fdacf3aef7d65f355ad8f17a96
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Oculus/VR/Textures/cube_texture.png
+- Assets/Agents/Texture/Ch22_1001_Diffuse.png
+- Assets/Oculus/VR/Textures/GazeRing.png
+- Packages/com.unity.animation.rigging/Editor/Icons/RuntimeRig@32.png
+- Assets/Agents/Texture/Ch22_1002_Diffuse.png
+- Assets/Agents/Texture/Ch22_1001_Glossiness.png
+- Assets/Agents/Texture/Ch22_1002_Normal.png
+- Assets/Agents/Texture/Ch22_1001_Normal.png
+- Assets/Agents/Texture/Ch22_1001_Specular.png
+- Assets/Oculus/VR/Textures/HandTracking/HandTracking_uvmap_2048.png
+Dependencies: []
