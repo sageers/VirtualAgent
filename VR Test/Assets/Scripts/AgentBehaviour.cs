@@ -13,10 +13,12 @@ public class AgentBehaviour : MonoBehaviour
 
     public Memory memory;
     public Rig gazeRig;
+    public Rig pointRig;
 
     public Transform goal1;
     public Transform goal2;
-
+    public Transform goal3;
+    
     public AudioClip welcome;
     public AudioClip thankYou;
     public AudioClip letsPlay;
@@ -29,11 +31,12 @@ public class AgentBehaviour : MonoBehaviour
     private bool _started = false;
     private int _animStatus = 0;
     private bool _corIsRunning = false;
+    
 
     #endregion
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _agentAnimator = GetComponent<Animator>();
         _agent = GetComponent<NavMeshAgent>();
@@ -104,7 +107,7 @@ public class AgentBehaviour : MonoBehaviour
     {
     //welcome and start looking at user
         _corIsRunning = true;
-        StartCoroutine(LerpGazeWeight(1, 0, 0.7f, gazeRig.weight));
+        StartCoroutine(LerpGazeWeight(1, 0, 0.7f));
         //TODO Play Audio or insert Text "Hallo"
         _audioSource.PlayOneShot(welcome);
         
@@ -119,7 +122,7 @@ public class AgentBehaviour : MonoBehaviour
     {
         _corIsRunning = true;
         //stand up and stop looking
-        StartCoroutine(LerpGazeWeight(1, 0.7f, 0f, gazeRig.weight));
+        StartCoroutine(LerpGazeWeight(1, 0.7f, 0f));
         _agentAnimator.SetTrigger("StandUp");
 
         yield return new WaitUntil(() =>_agentAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
@@ -135,7 +138,7 @@ public class AgentBehaviour : MonoBehaviour
     {
         _corIsRunning = true;
         //walk towards user
-        StartCoroutine(LerpGazeWeight(1, 0f, 0.4f, gazeRig.weight));
+        StartCoroutine(LerpGazeWeight(1, 0f, 0.2f));
         _agentAnimator.SetBool("Walk", true);
         MoveToGoal(goal1);
         //TODO change rotation if necessary
@@ -146,7 +149,147 @@ public class AgentBehaviour : MonoBehaviour
         _corIsRunning = false;
 
     }
+    
+    //animStatus = 2
+    private IEnumerator ThankYouAndLetsPlay()
+    {
+        _corIsRunning = true;
+        yield return new WaitForSeconds(2);
+        //TODO Conversation "Danke, dass du beim Test mitmachst."
+        _audioSource.PlayOneShot(thankYou);
+        StartCoroutine(LerpGazeWeight(1, 0.2f, 0.4f));
+        _agentAnimator.SetTrigger("TalkBothHandsUp");
+        yield return new WaitForSeconds(3);
+        //yield return new WaitWhile(() => _audioSource.isPlaying);
+       
+        yield return new WaitForSeconds(2);
+        //TODO Conversation "Komm doch erstmal mit rüber, wir spielen eine Runde Memory."
+        
+        _audioSource.PlayOneShot(letsPlay);
+        StartCoroutine(LerpGazeWeight(2, 0.4f, 0f));
+        //TODO anderes Rig weight > 0
+        //TODO Change Gaze towards Table/Memory and Point towards it
+        _agentAnimator.SetTrigger("TalkRightToLeft");
+        //yield return new WaitWhile(() => _audioSource.isPlaying);
+        yield return new WaitForSeconds(6);
+        
+        _animStatus = 3;
+        _corIsRunning = false;
+       
+            
+        
 
+    }
+    
+    //animStatus = 3
+    private IEnumerator WalkToTable()
+    {
+        _corIsRunning = true;
+        _agentAnimator.SetBool("Walk", true);
+        MoveToGoal(goal2);
+        StartCoroutine(LerpGazeWeight(3, 0, 0.2f));
+        yield return new WaitUntil(GoalReached);
+        MoveToGoal(goal3);
+        yield return new WaitUntil(GoalReached);
+        _agentAnimator.SetBool("Walk", false);
+        
+        
+        _animStatus = 4;
+        _corIsRunning = false;
+
+    }
+    
+    //animStatus = 4
+    private IEnumerator ConversationAtTable()
+    {
+        _corIsRunning = true;
+        //TODO Conversation "Super, dann fangen wir mal an."
+        _audioSource.PlayOneShot(thankYou);
+        _agentAnimator.SetTrigger("TalkOneHandUp");
+
+        yield return new WaitForSeconds(2);
+        _audioSource.PlayOneShot(thankYou);
+        //TODO Conversation "Mach den ersten Zug und versuch zwei gleichfarbige Karten aufzudecken"
+        _agentAnimator.SetTrigger("HipLeftToRight");
+        yield return new WaitForSeconds(5);
+
+        _animStatus = 5;
+        _corIsRunning = false;
+    }
+    
+    
+    private IEnumerator SwitchLegIdle()
+    {
+        yield return new WaitForSeconds(60);
+        _agentAnimator.SetTrigger("Idle2");
+    }
+    
+    #endregion
+    
+    /// <summary>
+    /// Coroutine to Lerp the Weight for the Gaze Animation Rigging
+    /// 
+    /// https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/#:~:text=What%20is%20Lerp%20in%20Unity,over%20a%20period%20of%20time.
+    /// </summary>
+    /// <param name="lerpduration">Duration of the Transition</param>
+    /// <param name="startValue">Start Weight for the Gaze Animation Rigging</param>
+    /// <param name="endValue">End Weight for the Gaze Animation Rigging</param>
+    /// <param name="valueToLerp">which variable should get the lerped values</param>
+    /// <returns></returns>
+    /// 
+    private IEnumerator LerpGazeWeight(float lerpduration, float startValue, float endValue)
+    {
+        float timeElapsed = 0;
+
+        while (timeElapsed< lerpduration)
+        {
+            gazeRig.weight = Mathf.Lerp(startValue, endValue, timeElapsed / lerpduration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        gazeRig.weight = endValue;
+    }
+    
+    private IEnumerator LerpPointWeight(float lerpduration, float startValue, float endValue)
+    {
+        float timeElapsed = 0;
+
+        while (timeElapsed< lerpduration)
+        {
+            pointRig.weight = Mathf.Lerp(startValue, endValue, timeElapsed / lerpduration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        pointRig.weight = endValue;
+    }
+    
+    /// <summary>
+    ///Method for NavMeshAgent to move towards a certain goal
+    /// </summary>
+    /// <param name="goal">Transform of the goal to move to</param>
+    private void MoveToGoal(Transform goal)
+    {
+        _agent.SetDestination(goal.position);
+        
+    }
+
+
+    public IEnumerator pointToWorld()
+    {
+        StartCoroutine(LerpPointWeight(1, 0, 0.8f));
+        _agentAnimator.SetTrigger("Point");
+        
+        yield return new WaitForSeconds(2);
+        
+        StartCoroutine(LerpPointWeight(1, 0, 0.8f));
+        _agentAnimator.SetTrigger("PointExit");
+
+        //pointRig.GetComponent<>()
+    }
+
+    
     /// <summary>
     ///Check whether the goal of the NavMeshAgent was reached
     /// </summary>
@@ -165,126 +308,6 @@ public class AgentBehaviour : MonoBehaviour
         }
 
         return reached;
-    }
-    
-    //animStatus = 2
-    private IEnumerator ThankYouAndLetsPlay()
-    {
-        _corIsRunning = true;
-        yield return new WaitForSeconds(2);
-        //TODO Conversation "Danke, dass du beim Test mitmachst."
-        _audioSource.PlayOneShot(thankYou);
-        StartCoroutine(LerpGazeWeight(1, 0.4f, 0.7f, gazeRig.weight));
-        _agentAnimator.SetTrigger("TalkBothHandsUp");
-        yield return new WaitForSeconds(3);
-        //yield return new WaitWhile(() => _audioSource.isPlaying);
-        //yield return new WaitWhile(() => _agentAnimator.GetCurrentAnimatorStateInfo(_agentAnimator.GetLayerIndex("Talking")).IsName("Talk-both-hands-up"));
-        //yield return new WaitUntil(() => _agentAnimator.GetCurrentAnimatorStateInfo(2).IsName("NotTalking"));
-        
-        
-        yield return new WaitForSeconds(2);
-        //TODO Conversation "Komm doch erstmal mit rüber, wir spielen eine Runde Memory."
-        
-        _audioSource.PlayOneShot(letsPlay);
-        StartCoroutine(LerpGazeWeight(2, 0.7f, 0f, gazeRig.weight));
-        //TODO anderes Rig weight > 0
-        //TODO Change Gaze towards Table/Memory and Point towards it
-        _agentAnimator.SetTrigger("TalkRightToLeft");
-        //yield return new WaitWhile(() => _audioSource.isPlaying);
-        yield return new WaitForSeconds(6);
-        //yield return new WaitWhile(() => _agentAnimator.GetCurrentAnimatorStateInfo(_agentAnimator.GetLayerIndex("Talking")).IsName("talk-hip-right-to-left"));
-        //if (!_audioSource.isPlaying)
-        //{
-            //if (_agentAnimator.GetCurrentAnimatorStateInfo(_agentAnimator.GetLayerIndex("Talking")).IsName("Not Talking"))
-            //{
-                _animStatus = 3;
-                _corIsRunning = false;
-            //}
-        //}
-            
-        
-
-    }
-    
-    private IEnumerator WalkToTable()
-    {
-        _corIsRunning = true;
-        _agentAnimator.SetBool("Walk", true);
-        MoveToGoal(goal2);
-        StartCoroutine(LerpGazeWeight(3, 0, 0.7f, 0.05f));
-        yield return new WaitUntil(GoalReached);
-        _agentAnimator.SetBool("Walk", false);
-        
-        
-        _animStatus = 4;
-        _corIsRunning = false;
-
-    }
-    
-    
-    private IEnumerator SwitchLegIdle()
-    {
-        yield return new WaitForSeconds(60);
-        _agentAnimator.SetTrigger("Idle2");
-    }
-    
-    #endregion
-    
-    
-
-    
-
-    IEnumerator ConversationAtTable()
-    {
-        _corIsRunning = true;
-        //TODO Conversation "Super, dann fangen wir mal an."
-        _audioSource.PlayOneShot(thankYou);
-        _agentAnimator.SetTrigger("TalkOneHandUp");
-
-        yield return new WaitForSeconds(2);
-        _audioSource.PlayOneShot(thankYou);
-        //TODO Conversation "Mach den ersten Zug und versuch zwei gleichfarbige Karten aufzudecken"
-        _agentAnimator.SetTrigger("HipLeftToRight");
-        yield return new WaitForSeconds(5);
-
-        _animStatus = 5;
-        _corIsRunning = false;
-    }
-    
-
-
-    /// <summary>
-    /// Coroutine to Lerp the Weight for the Gaze Animation Rigging
-    /// 
-    /// https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/#:~:text=What%20is%20Lerp%20in%20Unity,over%20a%20period%20of%20time.
-    /// </summary>
-    /// <param name="lerpduration">Duration of the Transition</param>
-    /// <param name="startValue">Start Weight for the Gaze Animation Rigging</param>
-    /// <param name="endValue">End Weight for the Gaze Animation Rigging</param>
-    /// <param name="valueToLerp">which variable should get the lerped values</param>
-    /// <returns></returns>
-    /// 
-    IEnumerator LerpGazeWeight(float lerpduration, float startValue, float endValue, float valueToLerp)
-    {
-        float timeElapsed = 0;
-
-        while (timeElapsed< lerpduration)
-        {
-            valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpduration);
-            timeElapsed += Time.deltaTime;
-            yield return valueToLerp;
-        }
-
-        yield return valueToLerp = endValue;
-    }
-    
-    /// <summary>
-    ///Method for NavMeshAgent to move towards a certain goal
-    /// </summary>
-    /// <param name="goal">Transform of the goal to move to</param>
-    public void MoveToGoal(Transform goal)
-    {
-        _agent.destination = goal.position;
     }
     
     private void OnCollisionEnter(Collision other)

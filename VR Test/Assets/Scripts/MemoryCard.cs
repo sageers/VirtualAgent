@@ -16,11 +16,6 @@ public class MemoryCard : MonoBehaviour
         materialToChange = GetComponent<Renderer>().material;
     }
 
-    private void Update()
-    {
-        
-    }
-
     public void TurnCard()
     {
         turned = true;
