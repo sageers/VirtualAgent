@@ -35,11 +35,8 @@ public class Memory : MonoBehaviour
         
         //NEU
 
-        turnedCards = 0;
+        //turnedCards = 0;
         
-//        if (currentSelected.Count >= 1)
-//            currentSelected.Clear();
-
         if (UserTurn)
         {
 
@@ -75,7 +72,7 @@ public class Memory : MonoBehaviour
             PickCards();
         }
         
-        if (currentSelected.Count == 2)
+        if (currentSelected.Count == 2 && !corIsRunning)
         {
             foreach (var memoryCard in memoryCards)
             {
@@ -85,65 +82,12 @@ public class Memory : MonoBehaviour
             StartCoroutine(WaitCompare(2));
 
         }
-        
-        
-        //ALT
-        
-        //txt.text = currentSelected.Count.ToString();
-        
-//        if (currentSelected.Count >= 1)
-//            currentSelected.Clear();
-        
-        // txt2.text = currentSelected.Count.ToString();
-        
-        
-//        foreach (var memoryCard in memoryCards.Where(memoryCard => (memoryCard.turned && (!memoryCard.paired))))
-//        {
-//            currentSelected.Add(memoryCard);
-//            turnedCards ++;
-//        }
-        
-        //txt3.text = currentSelected.Count.ToString();
-        
 
-//        if (currentSelected.Count == 2)
-//        {
-//            StartCoroutine(WaitCompare(2));
-//        }
-        
-        //txt4.text = currentSelected.Count.ToString();
-        
-        
-//        if (UserTurn)
-//        {
-            //wenn nur eine umgedreht ist, darf weitere aufgedeckt werden, ansonsten auf vergleich warten im nächsten Frame
-//            if (turnedCards % 2 == 0 && turnedCards != 0)
-//            {
-//                foreach (var memoryCard in memoryCards)
-//                {
-//                    memoryCard.GetComponent<EventTrigger>().enabled = false;
-//                }
-//            }
-//            else
-//            {
-//                foreach (var memoryCard in memoryCards.Where(memoryCard => !memoryCard.paired))
-//                {
-//                    memoryCard.GetComponent<EventTrigger>().enabled = true;
-//                }
-//            }
-            
-//        }
-//        else 
-//        {
-//            
-//            pickCard();
-//            
-//        }
-        
     }
 
     private IEnumerator WaitCompare(int seconds)
     {
+        corIsRunning = true;
         yield return new WaitForSeconds(seconds);
         
         if (CompareSelected())
@@ -160,6 +104,7 @@ public class Memory : MonoBehaviour
             UserTurn = !UserTurn;
         }
         currentSelected.Clear();
+        corIsRunning = false;
     }
 
     private void SetColors()
@@ -187,27 +132,34 @@ public class Memory : MonoBehaviour
         }  
     }
 
+    public bool corIsRunning;
     /// <summary>
     /// Pick two random card and turn it
     /// </summary>
     private void PickCards()
     {
-        while (currentSelected.Count < 2)
+
+        //wenn noch nicht 2 KArten sondern kein/eine ausgewählt, wähle weitere rdm KArte aus
+        while ((currentSelected.Count < 2) && (!corIsRunning))
         {
+            //wähle Random Karte
             var rdmNumber = UnityEngine.Random.Range(0, 19);
             var selectedCard = memoryCards[rdmNumber];
 
+            //gucke, ob die Karte schon geturnt ist (egal ob in diesem Zug oder vorher
             if (!selectedCard.turned)
             {
-                
                 selectedCard.TurnCard();
                 currentSelected.Add(selectedCard);
                 memoryTarget.position = selectedCard.gameObject.transform.position;
+                
                 StartCoroutine(agent.pointToWorld());
                 
             }
             
         }
+        
+        
     }
     
     /// <summary>

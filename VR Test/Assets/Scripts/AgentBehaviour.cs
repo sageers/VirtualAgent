@@ -220,7 +220,7 @@ public class AgentBehaviour : MonoBehaviour
     
     private IEnumerator SwitchLegIdle()
     {
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(120);
         _agentAnimator.SetTrigger("Idle2");
     }
     
@@ -278,15 +278,19 @@ public class AgentBehaviour : MonoBehaviour
 
     public IEnumerator pointToWorld()
     {
-        StartCoroutine(LerpPointWeight(1, 0, 0.8f));
+        memory.corIsRunning = true;
+        StartCoroutine(LerpPointWeight(1, 0, 1f));
         _agentAnimator.SetTrigger("Point");
         
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2f);
         
-        StartCoroutine(LerpPointWeight(1, 0, 0.8f));
-        _agentAnimator.SetTrigger("PointExit");
+        //StartCoroutine(LerpPointWeight(1, 0, 0.8f));
+        //_agentAnimator.SetTrigger("PointExit");
+        
+        //yield return new WaitForSeconds(1);
 
-        //pointRig.GetComponent<>()
+        memory.corIsRunning = false;
+
     }
 
     
