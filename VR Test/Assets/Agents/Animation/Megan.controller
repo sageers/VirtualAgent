@@ -107,7 +107,7 @@ AnimatorStateMachine:
     m_Position: {x: 320, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4516432438664099372}
-    m_Position: {x: 390, y: 110, z: 0}
+    m_Position: {x: 420, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1788844942394111903}
     m_Position: {x: 620, y: 0, z: 0}
@@ -120,7 +120,7 @@ AnimatorStateMachine:
   - {fileID: -2059844279535354493}
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 410, y: 240, z: 0}
+  m_AnyStatePosition: {x: 440, y: 150, z: 0}
   m_EntryPosition: {x: -70, y: 120, z: 0}
   m_ExitPosition: {x: 900, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -308,13 +308,13 @@ AnimatorStateMachine:
     m_Position: {x: 60, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -769423217978373353}
-    m_Position: {x: 60, y: -80, z: 0}
+    m_Position: {x: 60, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 151700323238683871}
     m_Position: {x: 290, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -471843681103849257}
-    m_Position: {x: 60, y: 300, z: 0}
+    m_Position: {x: 50, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8302114873186778672}
     m_Position: {x: 170, y: 200, z: 0}
@@ -327,7 +327,7 @@ AnimatorStateMachine:
   - {fileID: -528205553262503899}
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -100, y: -10, z: 0}
+  m_AnyStatePosition: {x: -180, y: 30, z: 0}
   m_EntryPosition: {x: -210, y: 120, z: 0}
   m_ExitPosition: {x: 560, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -799,7 +799,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: talk-hip-right-to-left
-  m_Speed: 1
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7322077436336046765}
@@ -832,7 +832,7 @@ AnimatorStateMachine:
     m_Position: {x: 410, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1577473138547480504}
-    m_Position: {x: 410, y: 20, z: 0}
+    m_Position: {x: 410, y: -10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

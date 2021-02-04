@@ -5,13 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR Test/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/Megan.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Agents/Animation/Megan.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Agents/Animation/edit_PointingStart.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Agents/Animation/edit_PointingStart.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BigFurniturePack/Models/Materials/base_material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BigFurniturePack/Models/Materials/base_material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/OVRBuildConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/OVRBuildConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Memory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Memory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/XRGeneralSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/XRGeneralSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +54,8 @@
         <option value="$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/DebugUI/Scripts/LaserPointer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MemoryCard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Memory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Memory.cs" />
       </list>
     </option>
   </component>
@@ -122,6 +121,9 @@
       <workItem from="1610624289557" duration="15376000" />
       <workItem from="1610697967195" duration="22111000" />
       <workItem from="1610805169991" duration="6976000" />
+      <workItem from="1610881529732" duration="1516000" />
+      <workItem from="1612257355760" duration="7132000" />
+      <workItem from="1612431282721" duration="15981000" />
     </task>
     <servers />
   </component>

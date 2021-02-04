@@ -21,6 +21,7 @@ public class Memory : MonoBehaviour
 
     public Transform memoryTarget;
     public AgentBehaviour agent;
+    private Animator _agentAnim;
 
     public Text txt;
     public Text txt2;
@@ -30,11 +31,11 @@ public class Memory : MonoBehaviour
     //0 = User 1 = Agent
     private bool UserTurn = true;
     
+    
+    
     private void Update()
     {
         
-        //NEU
-
         //turnedCards = 0;
         
         if (UserTurn)
@@ -59,8 +60,6 @@ public class Memory : MonoBehaviour
                     }
                 }
             }
-            
-
         }
         else
         {
@@ -79,6 +78,13 @@ public class Memory : MonoBehaviour
                 memoryCard.gameObject.GetComponent<EventTrigger>().enabled = false;
             }
 
+            if (!UserTurn)
+            {
+                StartCoroutine(agent.LerpPointWeight(1f, 1f, 0f));
+                _agentAnim.SetTrigger("PointExit");
+            }
+            
+            
             StartCoroutine(WaitCompare(2));
 
         }
@@ -146,22 +152,36 @@ public class Memory : MonoBehaviour
             var rdmNumber = UnityEngine.Random.Range(0, 19);
             var selectedCard = memoryCards[rdmNumber];
 
-            //gucke, ob die Karte schon geturnt ist (egal ob in diesem Zug oder vorher
+            //gucke, ob die Karte schon geturnt ist (egal ob in diesem Zug oder vorher)
             if (!selectedCard.turned)
             {
                 selectedCard.TurnCard();
                 currentSelected.Add(selectedCard);
-                memoryTarget.position = selectedCard.gameObject.transform.position;
+                StartCoroutine(MoveCardPosition(1, memoryTarget.position, selectedCard.gameObject.transform.position));
                 
                 StartCoroutine(agent.pointToWorld());
                 
             }
             
         }
-        
+
         
     }
     
+    private IEnumerator MoveCardPosition(float lerpduration, Vector3 startValue, Vector3 endValue)
+    {
+        float timeElapsed = 0;
+
+        while (timeElapsed< lerpduration)
+        {
+            memoryTarget.position = Vector3.Lerp(startValue, endValue, timeElapsed / lerpduration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        memoryTarget.position = endValue;
+    }
+
     /// <summary>
     /// Compare two selected Cards
     /// </summary>
@@ -183,6 +203,7 @@ public class Memory : MonoBehaviour
 
     public void Start()
     {
+        _agentAnim = agent.GetComponent<Animator>();
         foreach (Transform child in transform)
         {
             memoryCards.Add(child.gameObject.GetComponent<MemoryCard>());

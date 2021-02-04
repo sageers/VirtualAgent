@@ -13,6 +13,7 @@ public class AgentBehaviour : MonoBehaviour
 
     public Memory memory;
     public Rig gazeRig;
+    public Rig gazeRigTable;
     public Rig pointRig;
 
     public Transform goal1;
@@ -21,7 +22,9 @@ public class AgentBehaviour : MonoBehaviour
     
     public AudioClip welcome;
     public AudioClip thankYou;
+    public AudioClip overThere;
     public AudioClip letsPlay;
+    
     
     private Animator _agentAnimator;
     private NavMeshAgent _agent;
@@ -100,6 +103,7 @@ public class AgentBehaviour : MonoBehaviour
         //Sit down on couch dont look at user
         gazeRig.weight = 0;
         _agentAnimator.SetTrigger("SitDown");
+        //_agent.updateRotation = true;
     }
     
     //before animStatus
@@ -107,8 +111,8 @@ public class AgentBehaviour : MonoBehaviour
     {
     //welcome and start looking at user
         _corIsRunning = true;
-        StartCoroutine(LerpGazeWeight(1, 0, 0.7f));
-        //TODO Play Audio or insert Text "Hallo"
+        StartCoroutine(LerpGazeWeight(1, 0, 0.5f));
+        
         _audioSource.PlayOneShot(welcome);
         
         yield return new WaitWhile(() =>_audioSource.isPlaying);
@@ -122,14 +126,14 @@ public class AgentBehaviour : MonoBehaviour
     {
         _corIsRunning = true;
         //stand up and stop looking
-        StartCoroutine(LerpGazeWeight(1, 0.7f, 0f));
+        StartCoroutine(LerpGazeWeight(0.5f, 0.5f, 0f));
         _agentAnimator.SetTrigger("StandUp");
 
         yield return new WaitUntil(() =>_agentAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
 
         
-            _animStatus = 1;
-            _corIsRunning = false;
+        _animStatus = 1;
+        _corIsRunning = false;
 
     }
     
@@ -138,10 +142,12 @@ public class AgentBehaviour : MonoBehaviour
     {
         _corIsRunning = true;
         //walk towards user
-        StartCoroutine(LerpGazeWeight(1, 0f, 0.2f));
+        StartCoroutine(LerpGazeWeight(1, 0f, 0.4f));
         _agentAnimator.SetBool("Walk", true);
+        
+        //TODO maybe edit goal1 to be in front of the user no matter where it stands
         MoveToGoal(goal1);
-        //TODO change rotation if necessary
+        
         yield return new WaitUntil(GoalReached);
         _agentAnimator.SetBool("Walk", false);
        
@@ -154,64 +160,58 @@ public class AgentBehaviour : MonoBehaviour
     private IEnumerator ThankYouAndLetsPlay()
     {
         _corIsRunning = true;
-        yield return new WaitForSeconds(2);
-        //TODO Conversation "Danke, dass du beim Test mitmachst."
         _audioSource.PlayOneShot(thankYou);
-        StartCoroutine(LerpGazeWeight(1, 0.2f, 0.4f));
         _agentAnimator.SetTrigger("TalkBothHandsUp");
-        yield return new WaitForSeconds(3);
-        //yield return new WaitWhile(() => _audioSource.isPlaying);
-       
-        yield return new WaitForSeconds(2);
-        //TODO Conversation "Komm doch erstmal mit rüber, wir spielen eine Runde Memory."
+        StartCoroutine(LerpGazeWeight(1, 0.4f, 0.6f));
         
-        _audioSource.PlayOneShot(letsPlay);
-        StartCoroutine(LerpGazeWeight(2, 0.4f, 0f));
-        //TODO anderes Rig weight > 0
-        //TODO Change Gaze towards Table/Memory and Point towards it
+        yield return new WaitWhile(() => _audioSource.isPlaying);
+        
+        _audioSource.PlayOneShot(overThere);
         _agentAnimator.SetTrigger("TalkRightToLeft");
-        //yield return new WaitWhile(() => _audioSource.isPlaying);
-        yield return new WaitForSeconds(6);
+        StartCoroutine(LerpGazeWeight(1, 0.6f, 0f));
+        
+        StartCoroutine(LerpGazeTableWeight(1, 0, 0.3f));
+        
+        yield return new WaitWhile(() => _audioSource.isPlaying);
+        StartCoroutine(LerpGazeTableWeight(0.5f, 0.3f, 0));
         
         _animStatus = 3;
         _corIsRunning = false;
        
-            
-        
-
     }
     
     //animStatus = 3
     private IEnumerator WalkToTable()
     {
         _corIsRunning = true;
+        
         _agentAnimator.SetBool("Walk", true);
         MoveToGoal(goal2);
         StartCoroutine(LerpGazeWeight(3, 0, 0.2f));
         yield return new WaitUntil(GoalReached);
+        
+        StartCoroutine(LerpLookRotation(2,transform.rotation,goal3.rotation));
         MoveToGoal(goal3);
         yield return new WaitUntil(GoalReached);
         _agentAnimator.SetBool("Walk", false);
-        
         
         _animStatus = 4;
         _corIsRunning = false;
 
     }
     
+
     //animStatus = 4
     private IEnumerator ConversationAtTable()
     {
         _corIsRunning = true;
-        //TODO Conversation "Super, dann fangen wir mal an."
-        _audioSource.PlayOneShot(thankYou);
+        
+        _audioSource.PlayOneShot(letsPlay);
         _agentAnimator.SetTrigger("TalkOneHandUp");
-
-        yield return new WaitForSeconds(2);
-        _audioSource.PlayOneShot(thankYou);
-        //TODO Conversation "Mach den ersten Zug und versuch zwei gleichfarbige Karten aufzudecken"
-        _agentAnimator.SetTrigger("HipLeftToRight");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(0.7f);
+        
+        _agentAnimator.SetTrigger("TalkHipLeftToRight");
+        yield return new WaitWhile(() =>_audioSource.isPlaying);
 
         _animStatus = 5;
         _corIsRunning = false;
@@ -220,7 +220,7 @@ public class AgentBehaviour : MonoBehaviour
     
     private IEnumerator SwitchLegIdle()
     {
-        yield return new WaitForSeconds(120);
+        yield return new WaitForSeconds(180);
         _agentAnimator.SetTrigger("Idle2");
     }
     
@@ -251,7 +251,22 @@ public class AgentBehaviour : MonoBehaviour
         gazeRig.weight = endValue;
     }
     
-    private IEnumerator LerpPointWeight(float lerpduration, float startValue, float endValue)
+    private IEnumerator LerpGazeTableWeight(float lerpduration, float startValue, float endValue)
+    {
+        float timeElapsed = 0;
+
+        while (timeElapsed< lerpduration)
+        {
+            gazeRigTable.weight = Mathf.Lerp(startValue, endValue, timeElapsed / lerpduration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        gazeRigTable.weight = endValue;
+    }
+    
+    
+    public IEnumerator LerpPointWeight(float lerpduration, float startValue, float endValue)
     {
         float timeElapsed = 0;
 
@@ -263,6 +278,22 @@ public class AgentBehaviour : MonoBehaviour
         }
 
         pointRig.weight = endValue;
+    }
+    
+    private IEnumerator LerpLookRotation(float lerpduration, Quaternion startValue, Quaternion endValue)
+    {
+        _agent.updateRotation = false;
+        float timeElapsed = 0;
+
+        while (timeElapsed< lerpduration)
+        {
+            _agent.transform.rotation = Quaternion.Slerp(startValue, endValue, timeElapsed / lerpduration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        _agent.transform.rotation = endValue;
+        
     }
     
     /// <summary>
@@ -279,10 +310,15 @@ public class AgentBehaviour : MonoBehaviour
     public IEnumerator pointToWorld()
     {
         memory.corIsRunning = true;
-        StartCoroutine(LerpPointWeight(1, 0, 1f));
+        
+        if (pointRig.weight.Equals(0))
+        {
+            StartCoroutine(LerpPointWeight(1, 0, 1f));
+        }
+        
         _agentAnimator.SetTrigger("Point");
         
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         
         //StartCoroutine(LerpPointWeight(1, 0, 0.8f));
         //_agentAnimator.SetTrigger("PointExit");
