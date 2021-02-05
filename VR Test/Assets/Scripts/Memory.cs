@@ -80,8 +80,9 @@ public class Memory : MonoBehaviour
 
             if (!UserTurn)
             {
-                StartCoroutine(agent.LerpPointWeight(1f, 1f, 0f));
                 _agentAnim.SetTrigger("PointExit");
+                StartCoroutine(agent.LerpPointWeight(1f, 1f, 0f));
+                
             }
             
             

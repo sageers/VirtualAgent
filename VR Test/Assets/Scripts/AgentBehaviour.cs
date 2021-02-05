@@ -24,7 +24,8 @@ public class AgentBehaviour : MonoBehaviour
     public AudioClip thankYou;
     public AudioClip overThere;
     public AudioClip letsPlay;
-    
+
+    public Collider otherCollider;
     
     private Animator _agentAnimator;
     private NavMeshAgent _agent;
@@ -77,6 +78,7 @@ public class AgentBehaviour : MonoBehaviour
                         StartCoroutine(WalkToTable());
                         break;
                     case 4:
+                        otherCollider.enabled = true;
                         StartCoroutine(ConversationAtTable());
                         break;
                     default:
@@ -170,10 +172,11 @@ public class AgentBehaviour : MonoBehaviour
         _agentAnimator.SetTrigger("TalkRightToLeft");
         StartCoroutine(LerpGazeWeight(1, 0.6f, 0f));
         
-        StartCoroutine(LerpGazeTableWeight(1, 0, 0.3f));
+        StartCoroutine(LerpGazeTableWeight(0.5f, 0, 0.2f));
         
         yield return new WaitWhile(() => _audioSource.isPlaying);
-        StartCoroutine(LerpGazeTableWeight(0.5f, 0.3f, 0));
+        StartCoroutine(LerpGazeTableWeight(0.5f, 0.2f, 0));
+        
         
         _animStatus = 3;
         _corIsRunning = false;
@@ -187,7 +190,7 @@ public class AgentBehaviour : MonoBehaviour
         
         _agentAnimator.SetBool("Walk", true);
         MoveToGoal(goal2);
-        StartCoroutine(LerpGazeWeight(3, 0, 0.2f));
+        StartCoroutine(LerpGazeWeight(3, 0, 0.3f));
         yield return new WaitUntil(GoalReached);
         
         StartCoroutine(LerpLookRotation(2,transform.rotation,goal3.rotation));
@@ -205,15 +208,19 @@ public class AgentBehaviour : MonoBehaviour
     private IEnumerator ConversationAtTable()
     {
         _corIsRunning = true;
-        
-        _audioSource.PlayOneShot(letsPlay);
-        _agentAnimator.SetTrigger("TalkOneHandUp");
-        yield return new WaitForSeconds(0.7f);
-        
-        _agentAnimator.SetTrigger("TalkHipLeftToRight");
-        yield return new WaitWhile(() =>_audioSource.isPlaying);
 
-        _animStatus = 5;
+        if (collided)
+        {
+            _audioSource.PlayOneShot(letsPlay);
+            _agentAnimator.SetTrigger("TalkOneHandUp");
+            yield return new WaitForSeconds(0.3f);
+        
+            _agentAnimator.SetTrigger("TalkHipLeftToRight");
+            yield return new WaitWhile(() =>_audioSource.isPlaying);
+
+            _animStatus = 5;
+        }
+        
         _corIsRunning = false;
     }
     
@@ -225,7 +232,9 @@ public class AgentBehaviour : MonoBehaviour
     }
     
     #endregion
-    
+
+    #region Lerps
+
     /// <summary>
     /// Coroutine to Lerp the Weight for the Gaze Animation Rigging
     /// 
@@ -295,6 +304,9 @@ public class AgentBehaviour : MonoBehaviour
         _agent.transform.rotation = endValue;
         
     }
+
+    #endregion
+    
     
     /// <summary>
     ///Method for NavMeshAgent to move towards a certain goal
@@ -314,17 +326,10 @@ public class AgentBehaviour : MonoBehaviour
         if (pointRig.weight.Equals(0))
         {
             StartCoroutine(LerpPointWeight(1, 0, 1f));
+            _agentAnimator.SetTrigger("Point");
         }
         
-        _agentAnimator.SetTrigger("Point");
-        
         yield return new WaitForSeconds(1.5f);
-        
-        //StartCoroutine(LerpPointWeight(1, 0, 0.8f));
-        //_agentAnimator.SetTrigger("PointExit");
-        
-        //yield return new WaitForSeconds(1);
-
         memory.corIsRunning = false;
 
     }
@@ -349,12 +354,14 @@ public class AgentBehaviour : MonoBehaviour
 
         return reached;
     }
-    
+
+    private bool collided = false;
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.name.Equals("OVRPlayerController"))
+        if (other.gameObject.name.Equals("ForwardDirection"))
         {
-            
+
+            collided = true;
             //start conversation
         }
     }
